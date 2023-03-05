@@ -13,8 +13,11 @@
   "author": "Ahmad Sidik Rudini",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "http-status": "^1.6.2",
+    "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0",
     "pg": "^8.9.0",
     "pg-hstore": "^2.3.4",
