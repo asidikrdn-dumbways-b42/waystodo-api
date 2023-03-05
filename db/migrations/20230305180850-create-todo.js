@@ -9,15 +9,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER,
+        field: "user_id",
         references: {
           model: "users",
           key: "id",
         },
       },
-      category_id: {
+      categoryId: {
         type: Sequelize.INTEGER,
+        field: "category_id",
         references: {
           model: "categories",
           key: "id",
@@ -32,8 +34,9 @@ module.exports = {
       status: {
         type: Sequelize.BOOLEAN,
       },
-      bg_color: {
+      bgColor: {
         type: Sequelize.STRING,
+        field: "bg_color",
       },
       date: {
         type: Sequelize.DATE,
@@ -41,10 +44,12 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        field: "created_at",
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        field: "updated_at",
       },
     });
   },

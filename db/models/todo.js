@@ -1,7 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class todos extends Model {
+  class Todo extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -9,28 +9,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      todos.belongsTo(models.users, {
-        foreignKey: "user_id",
-      });
-      todos.belongsTo(models.categories, {
-        foreignKey: "category_id",
-      });
+      Todo.belongsTo(models.User, { foreignKey: "userId" });
+      Todo.belongsTo(models.Category, { foreignKey: "categoryId" });
     }
   }
-  todos.init(
+  Todo.init(
     {
-      user_id: DataTypes.INTEGER,
-      category_id: DataTypes.INTEGER,
+      userId: {
+        type: DataTypes.INTEGER,
+        // field: "user_id",
+      },
+      categoryId: {
+        type: DataTypes.INTEGER,
+        // field: "category_id",
+      },
       title: DataTypes.STRING,
       description: DataTypes.STRING,
       status: DataTypes.BOOLEAN,
-      bg_color: DataTypes.STRING,
+      bgColor: {
+        type: DataTypes.STRING,
+        // field: "bg_color",
+      },
       date: DataTypes.DATE,
     },
     {
       sequelize,
-      modelName: "todos",
+      modelName: "Todo",
+      underscored: true,
     }
   );
-  return todos;
+  return Todo;
 };
