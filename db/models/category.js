@@ -11,9 +11,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Category.belongsTo(models.User, {
         foreignKey: "userId",
+        as: "user", // untuk object key ketika mempreload user di data category
       });
       Category.hasMany(models.Todo, {
         foreignKey: "categoryId",
+        as: {
+          // untuk object key ketika mempreload todo di data category
+          singular: "todo",
+          plural: "todos",
+        },
       });
     }
   }
