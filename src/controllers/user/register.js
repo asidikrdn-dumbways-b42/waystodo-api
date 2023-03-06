@@ -1,5 +1,4 @@
 const bcrypt = require("bcrypt");
-const db = require("../../database/connection");
 const { User } = require("../../../db/models");
 const status = require("http-status");
 
@@ -29,12 +28,6 @@ const register = async (req, res) => {
       password: hashedPassword,
       phone,
     });
-    // const user = await users.create({
-    //   full_name: fullName,
-    //   email: email,
-    //   password: hashedPassword,
-    //   phone: phone,
-    // });
 
     res.status(status.CREATED).json({
       message: "User registered successfully",
