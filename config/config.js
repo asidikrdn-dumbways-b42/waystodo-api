@@ -30,6 +30,7 @@ module.exports = {
     database: process.env.PROD_DB_NAME,
     host: process.env.PROD_DB_HOSTNAME,
     port: process.env.PROD_DB_PORT,
+    logging: false,
     dialect: "postgresql",
     dialectOptions: {
       bigNumberStrings: true,

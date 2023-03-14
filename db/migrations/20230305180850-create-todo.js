@@ -31,8 +31,9 @@ module.exports = {
       description: {
         type: Sequelize.STRING,
       },
-      status: {
+      isDone: {
         type: Sequelize.BOOLEAN,
+        field: "is_done",
       },
       bgColor: {
         type: Sequelize.STRING,

@@ -15,11 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Todo.belongsTo(models.Category, {
         foreignKey: "categoryId",
-        as: {
-          // untuk object key ketika mempreload category di data todo
-          singular: "category", //
-          plural: "categories",
-        },
+        as: "category",
       });
     }
   }
@@ -35,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       title: DataTypes.STRING,
       description: DataTypes.STRING,
-      status: DataTypes.BOOLEAN,
+      isDone: DataTypes.BOOLEAN,
       bgColor: {
         type: DataTypes.STRING,
         // field: "bg_color",
