@@ -1,4 +1,3 @@
-const bcrypt = require("bcrypt");
 const { User } = require("../../../db/models");
 const status = require("http-status");
 
@@ -15,17 +14,17 @@ const register = async (req, res) => {
       throw new Error("User already registered");
     }
 
-    // hashing password
-    let hashedPassword = await bcrypt.hash(password, 10);
-    if (typeof hashedPassword !== "string") {
-      throw new Error("Error while hashing password");
-    }
+    // hashing password on controller
+    // let hashedPassword = await bcrypt.hash(password, 10);
+    // if (typeof hashedPassword !== "string") {
+    //   throw new Error("Error while hashing password");
+    // }
 
     // insert user to database
     const user = await User.create({
       fullName,
       email,
-      password: hashedPassword,
+      password,
       phone,
     });
 
