@@ -17,7 +17,7 @@ app.use(express.json());
 const port = process.env.PORT || 5000;
 
 // get router
-const router = require("./src/routes");
+const router = require("./routes");
 // create router group
 app.use("/api/v1/", router);
 

@@ -2,12 +2,12 @@
   "name": "waystodo-api",
   "version": "1.0.0",
   "description": "REST API for waystodo apps",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
     "migrate:up": "npx sequelize db:migrate",
     "migrate:down": "npx sequelize db:migrate:undo:all",
-    "start": "NODE_ENV=production nodemon index.js",
-    "start-dev": "NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production nodemon ./src/server.js",
+    "dev": "NODE_ENV=development nodemon ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ahmad Sidik Rudini",
