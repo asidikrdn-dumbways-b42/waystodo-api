@@ -1,10 +1,8 @@
-const {
-  addCategory,
-  updateCategory,
-  findAllCategoryByUser,
-  getDetailCategory,
-  deleteCategory,
-} = require("../controllers/category");
+const addCategory = require("../controllers/category/addCategory");
+const updateCategory = require("../controllers/category/updateCategory");
+const getDetailCategory = require("../controllers/category/getDetailCategory");
+const findAllCategoryByUser = require("../controllers/category/findAllCategoryByUser");
+const deleteCategory = require("../controllers/category/deleteCategory");
 const userAuth = require("../middleware/userAuth");
 
 const category = (router) => {
