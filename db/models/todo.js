@@ -23,18 +23,15 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: {
         type: DataTypes.INTEGER,
-        // field: "user_id",
       },
       categoryId: {
         type: DataTypes.INTEGER,
-        // field: "category_id",
       },
       title: DataTypes.STRING,
       description: DataTypes.STRING,
       isDone: DataTypes.BOOLEAN,
       bgColor: {
         type: DataTypes.STRING,
-        // field: "bg_color",
       },
       date: DataTypes.DATE,
     },

@@ -27,15 +27,12 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: {
         type: DataTypes.INTEGER,
-        // field: "user_id",
       },
       categoryName: {
         type: DataTypes.STRING,
-        // field: "category_name",
       },
       bgColor: {
         type: DataTypes.STRING,
-        // field: "bg_color",
       },
     },
     {

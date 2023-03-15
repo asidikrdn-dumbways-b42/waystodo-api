@@ -32,12 +32,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       fullName: {
         type: DataTypes.STRING,
-        // field: "full_name",
       },
       email: DataTypes.STRING,
       isEmailVerified: {
         type: DataTypes.BOOLEAN,
-        // field: "is_email_verified",
       },
       phone: DataTypes.STRING,
       image: DataTypes.STRING,
